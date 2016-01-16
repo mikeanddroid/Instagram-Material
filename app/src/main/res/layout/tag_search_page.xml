@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translucent_grey"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.MyTimeAppCompat">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingEnd="8dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingStart="8dp">
+
+        <EditText
+            android:id="@+id/storesSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your search here"
+            android:imeOptions="actionGo"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/userInfoHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_11"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                android:id="@+id/switchTagSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/search_for_tag"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:foundFont="@integer/font_roboto_bold" />
+
+            <Switch
+                android:id="@+id/type_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                android:id="@+id/switchUserSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/searching_for_user"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:foundFont="@integer/font_roboto_bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/recycler_list_layout"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp" />
+
+</LinearLayout>

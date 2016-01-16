@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Instagram-CodeChallenge</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="initialize_text">Initialize</string>
+    <string name="loading_info">Loading info.. Please wait</string>
+    <string name="login_error">Login Error</string>
+    <string name="action_signin_notification">You are now signed in.</string>
+    <string name="welcome_key">Welcome,</string>
+    <string name="next">Next</string>
+    <string name="Caption">Caption</string>
+    <string name="logout_message">This will log you out of the application. Do you still want to continue ?</string>
+    <string name="logout_title">Logging out</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="likes_key">Likes</string>
+
+    <string name="error_network">There was a problem finding your request. Please try again.</string>
+    <string name="error_conversion">There was a problem finding your request. Please try again.</string>
+    <string name="error_server">There was a problem finding your request. Please try again.</string>
+    <string name="error_unexpected">There was a problem finding your request. Please try again.</string>
+    <string name="user">User</string>
+
+    <string name="search_for_tag">Search for #hashtag</string>
+    <string name="search_for_user">Search for User</string>
+    <string name="searching_for_user">Searching for User</string>
+    <string name="searching_for_tag">Searching for #hashtag</string>
+
+</resources>

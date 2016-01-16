@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mediaDetailHolder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_11"
+    android:clickable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/profileBlur"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scaleType="centerCrop" />-->
+
+        <ImageView
+            android:id="@+id/item_detail_media"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_11"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                android:id="@+id/item_detail_caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:maxLines="5"
+                android:padding="8dp"
+                android:text="@string/Caption"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                app:foundFont="@integer/font_roboto_bold" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

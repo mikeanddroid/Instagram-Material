@@ -30,3 +30,5 @@ proguard/
 
 # Android Studio captures folder
 captures/
+.idea/
+app/src/main/java/com/mike/givemewingzz/instagram_codechallenge/utils/AuthKeys.java

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:id="@+id/mediaHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_drawable_color"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_media"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/grey_11"
+            android:scaleType="centerCrop" />
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/aboutLoginHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/translucent_grey"
+                    android:minHeight="44dp">
+
+                    <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                        android:id="@+id/item_caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="@string/Caption"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        app:foundFont="@integer/font_roboto_bold" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/item_media_likes_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/translucent_grey">
+
+                    <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                        android:id="@+id/item_media_likes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:text="@string/likes_key"
+                        android:textColor="@color/deep_orange_6"
+                        android:textSize="14sp"
+                        app:foundFont="@integer/font_roboto_bold" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

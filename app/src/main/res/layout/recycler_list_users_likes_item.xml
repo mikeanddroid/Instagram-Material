@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/userHolder"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_grey_light"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.mike.givemewingzz.instagram_codechallenge.customviews.RoundedImageView
+            android:id="@+id/userProfileImage"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="8dp"
+            android:padding="8dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/userInfoHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_11"
+                android:elevation="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/user"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:foundFont="@integer/font_roboto_bold" />
+
+                <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                    android:id="@+id/userFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/user"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:foundFont="@integer/font_roboto_bold" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

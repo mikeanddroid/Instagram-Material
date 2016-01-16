@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading_info">Loading info.. Please wait</string>
+    <string name="action_signin_notification">You are now signed in.</string>
+    <string name="welcome_key">Welcome,</string>
+    <string name="next">Next</string>
+    <string name="Caption">Caption</string>
+    <string name="likes_key">Likes</string>
+    <string name="user">User</string>
+    <string name="searching_for_user">Searching for User</string>
+</resources>
