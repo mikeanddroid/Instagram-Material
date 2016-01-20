@@ -25,7 +25,7 @@ import com.mike.givemewingzz.instagram_codechallenge.R;
 import com.mike.givemewingzz.instagram_codechallenge.adapters.MediaTagAdapter;
 import com.mike.givemewingzz.instagram_codechallenge.adapters.MediaUserSearchAdapter;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.Token;
-import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.UsersList;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.UsersList;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.tags.MediaTag;
 import com.mike.givemewingzz.instagram_codechallenge.core.BaseAuthAppCompat;
 import com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView;

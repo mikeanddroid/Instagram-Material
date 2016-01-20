@@ -40,6 +40,11 @@
         <activity
             android:name=".activities.TagSearchPage"
             android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".activities.TagsPage"
+            android:theme="@style/AppTheme.FullScreen">
+
+        </activity>
 
     </application>
 

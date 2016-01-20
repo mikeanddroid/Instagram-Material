@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.mike.givemewingzz.instagram_codechallenge.R;
-import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.UsersList;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.UsersList;
 import com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView;
 import com.mike.givemewingzz.instagram_codechallenge.utils.image_utils.ImageLoaderUtility;
 
@@ -42,7 +42,7 @@ public class MediaUserSearchAdapter extends RealmBaseRecyclerViewAdapter<UsersLi
 
     @Override
     public UserSearchViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_list_users_likes_item, viewGroup, false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_list_users_profiles_item, viewGroup, false);
         UserSearchViewHolder mediaViewHolder = new UserSearchViewHolder(v);
         return mediaViewHolder;
     }

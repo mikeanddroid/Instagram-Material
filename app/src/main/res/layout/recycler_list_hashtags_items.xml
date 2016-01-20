@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tagsHolder"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_margin="4dp"
+    android:background="@color/translucent_grey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ripple_drawable"
+        android:clickable="true"
+        android:padding="8dp">
+
+        <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+            android:id="@+id/tagsName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_grey_light"
+            android:gravity="center"
+            android:text="@string/tag_key"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:foundFont="@integer/font_roboto_bold" />
+
+    </LinearLayout>
+
+</FrameLayout>

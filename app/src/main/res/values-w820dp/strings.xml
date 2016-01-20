@@ -8,4 +8,8 @@
     <string name="likes_key">Likes</string>
     <string name="user">User</string>
     <string name="searching_for_user">Searching for User</string>
+    <string name="tag_key">Tags</string>
+    <string name="popular_tag_key">Popular Tags</string>
+    <string name="skip_tags_page">Skip This</string>
+    <string name="user_header_key">User Header</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.mike.givemewingzz.instagram_codechallenge.appmodel.media;
+package com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -6,9 +6,9 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by GiveMeWingzz on 1/14/2016.
+ * Created by GiveMeWingzz on 1/19/2016.
  */
-public class UsersList extends RealmObject {
+public class UserFollows extends RealmObject {
 
     @SerializedName("id")
     @PrimaryKey

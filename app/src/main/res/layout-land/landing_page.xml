@@ -17,16 +17,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/transparent_grey_light"
+        android:orientation="vertical"
+        android:padding="8dp">
 
-        <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
-            android:id="@+id/userFirstName"
+        <LinearLayout
+            android:id="@+id/userHolder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/transparent_grey_light2"
+            android:elevation="8dp"
             android:gravity="center"
-            android:text="@string/welcome_key"
-            android:textSize="36sp"
-            app:foundFont="@integer/font_roboto_bold" />
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                android:id="@+id/userFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/welcome_key"
+                android:textSize="36sp"
+                app:foundFont="@integer/font_roboto_bold" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,8 +51,11 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/transparent_grey_light2"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <com.mike.givemewingzz.instagram_codechallenge.customviews.RoundedImageView
                     android:id="@+id/profileImage"
@@ -53,15 +70,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="8dp">
 
                 <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
                     android:id="@+id/userBio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/transparent_grey_light2"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/brown_2"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:foundFont="@integer/font_roboto_regular" />
@@ -70,22 +90,33 @@
                     android:id="@+id/userHeadline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/transparent_grey_light2"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/brown_2"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:foundFont="@integer/font_roboto_light" />
 
-                <Button
-                    android:id="@+id/next"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ripple_drawable"
-                    android:text="@string/next"
-                    android:textColor="@android:color/white" />
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/transparent_grey_light2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/next"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ripple_drawable"
+                        android:text="@string/next"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
 
             </LinearLayout>
 

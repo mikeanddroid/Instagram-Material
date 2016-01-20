@@ -308,5 +308,6 @@
     <color name="translucent_grey">#455a64</color>
     <color name="transparent_grey">#99455A64</color>
     <color name="transparent_grey_light">#44455A64</color>
+    <color name="transparent_grey_light2">#88455a64</color>
 
 </resources>

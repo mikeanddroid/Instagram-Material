@@ -1,5 +1,7 @@
 package com.mike.givemewingzz.instagram_codechallenge.appmodel;
 
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.SearchedUsers;
+
 import java.util.List;
 
 /**

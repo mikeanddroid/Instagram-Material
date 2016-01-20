@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="8dp"
+        card_view:cardElevation="4dp">
+
+        <RelativeLayout
+            android:id="@+id/mediaHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_drawable_color"
+            android:clickable="true"
+            android:elevation="8dp">
+
+            <LinearLayout
+                android:id="@+id/headerHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.mike.givemewingzz.instagram_codechallenge.customviews.RoundedImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop" />
+
+                <com.mike.givemewingzz.instagram_codechallenge.customviews.RobotoTextView
+                    android:id="@+id/user_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/user_header_key"
+                    android:textColor="@color/grey_11"
+                    android:textSize="16sp"
+                    app:foundFont="@integer/font_roboto_bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/user_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerHolder"
+                android:layout_marginTop="8dp"
+                android:background="@color/grey_11"
+                android:scaleType="centerCrop"
+                android:src="@drawable/common_plus_signin_btn_text_dark_pressed" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

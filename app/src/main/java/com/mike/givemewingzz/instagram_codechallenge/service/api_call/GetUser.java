@@ -4,11 +4,13 @@ import android.content.Context;
 import android.util.Log;
 
 import com.mike.givemewingzz.instagram_codechallenge.R;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.ListWrapper;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.Token;
-import com.mike.givemewingzz.instagram_codechallenge.appmodel.User;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.User;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.UserWrapper;
-import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.UsersList;
-import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.UsersListWrapper;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.UserFollows;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.UsersList;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.UsersListWrapper;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.data.MediaCaptionFrom;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.data.MediaCaptions;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.data.MediaImages;
@@ -218,6 +220,80 @@ public class GetUser {
             }
         });
 
+    }
+
+    public static void getUserFollows() {
+
+        RetrofitInterface retrofitInterface = BaseClient.getRetrofitInterface();
+        retrofitInterface.getUserFollows(new Callback<ListWrapper<UserFollows>>() {
+            @Override
+            public void success(ListWrapper<UserFollows> userFollowsListWrapper, Response response) {
+
+                try {
+
+                    RealmList<UserFollows> realmList = userFollowsListWrapper.getData();
+
+                    Log.d(TAG, "getUserFollows info Count : " + realmList.size());
+
+                    Realm realm = Realm.getDefaultInstance();
+                    realm.beginTransaction();
+
+                    realm.clear(UserFollows.class);
+
+                    realm.copyToRealm(realmList);
+
+                    realm.commitTransaction();
+
+                    EventBusSingleton.post(new UserFollowsSuccess(realmList));
+
+                } catch (NullPointerException npe) {
+                    Log.e(TAG, "Missing element somewhere in getPlans response", npe);
+                    EventBusSingleton.post(new UserFollowsFailure("Failure in response"));
+                    // Todo: Publish error
+                }
+
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+                Log.d(TAG, "getUserFollows : " + error.getMessage());
+            }
+        });
+
+    }
+
+    public static class UserFollowsSuccess {
+
+        public RealmList<UserFollows> mediaTags;
+
+        public UserFollowsSuccess(RealmList<UserFollows> mediaInfo) {
+            this.mediaTags = mediaInfo;
+        }
+
+        public RealmList<UserFollows> getMediaInfo() {
+            return mediaTags;
+        }
+
+        public void setMediaInfo(RealmList<UserFollows> mediaInfo) {
+            this.mediaTags = mediaInfo;
+        }
+    }
+
+    public static class UserFollowsFailure {
+
+        public String errorMessage;
+
+        public UserFollowsFailure(String errorMessage) {
+            this.errorMessage = errorMessage;
+        }
+
+        public String getErrorMessage() {
+            return errorMessage;
+        }
+
+        public void setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+        }
     }
 
     public static class MediaInfoSuccess {

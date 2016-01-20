@@ -1,4 +1,4 @@
-package com.mike.givemewingzz.instagram_codechallenge.appmodel.media;
+package com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;

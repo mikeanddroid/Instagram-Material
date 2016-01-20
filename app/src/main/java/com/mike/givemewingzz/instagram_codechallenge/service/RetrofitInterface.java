@@ -1,7 +1,9 @@
 package com.mike.givemewingzz.instagram_codechallenge.service;
 
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.ListWrapper;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.UserWrapper;
-import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.UsersListWrapper;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.UserFollows;
+import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.user.UsersListWrapper;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.data.MediaInfoWrapper;
 import com.mike.givemewingzz.instagram_codechallenge.appmodel.media.tags.MediaTagWrapper;
 
@@ -42,5 +44,9 @@ public interface RetrofitInterface {
     // Tags //
     @GET("/v1/tags/{tag-name}/media/recent")
     public void getMediaForTagName(@Path("tag-name") String tag_name, Callback<MediaTagWrapper> cb);
+
+    // Follows
+    @GET("/v1/users/self/follows")
+    public void getUserFollows(Callback<ListWrapper<UserFollows>> cb);
 
 }

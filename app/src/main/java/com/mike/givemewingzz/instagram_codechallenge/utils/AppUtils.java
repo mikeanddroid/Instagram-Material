@@ -11,6 +11,7 @@ import com.mike.givemewingzz.instagram_codechallenge.core.InstagramDemoApplicati
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -159,6 +160,25 @@ public class AppUtils {
 
         public LinkedHashMap<String, String> getPopularHashTags() {
             return popularHashTags;
+        }
+
+        public List<String> getHashTagsList() {
+
+            List<String> hashList = new ArrayList<>();
+
+            for (Map.Entry<String, String> values : popularHashTags.entrySet()) {
+
+                String value = values.getValue();
+                String key = values.getKey();
+
+                Log.d(TAG, "Hash Key : " + key + " : Hash Values : " + value);
+
+                hashList.add(key);
+
+            }
+
+            return hashList;
+
         }
 
     }

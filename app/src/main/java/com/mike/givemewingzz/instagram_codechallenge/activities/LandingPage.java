@@ -93,7 +93,7 @@ public class LandingPage extends BaseAuthAppCompat implements View.OnClickListen
                     optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(LandingPage.this, null);
                 }
 
-                Intent intent = new Intent(LandingPage.this, MediaList.class);
+                Intent intent = new Intent(LandingPage.this, TagsPage.class);
                 startActivity(intent, optionsCompat.toBundle());
 
             }
